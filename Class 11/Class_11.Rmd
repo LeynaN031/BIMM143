@@ -1,0 +1,21 @@
+---
+title: "Class11"
+output: github_document
+---
+
+> Q1: What percentage of structures in the PDB are solved by X-Ray and Electron Microscopy.
+
+> Q2: What proportion of structures in the PDB are protein?
+
+> Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB?
+
+
+
+
+
+
+
+
+
+
+
