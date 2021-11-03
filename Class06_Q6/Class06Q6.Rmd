@@ -1,0 +1,54 @@
+---
+title: "Class06Q6"
+author: "Leyna Nguyen"
+date: "10/23/2021"
+output: pdf_document
+---
+
+```{r}
+library(bio3d)
+s1 <- read.pdb("4AKE")  # kinase with drug
+s2 <- read.pdb("1AKE")  # kinase no drug
+s3 <- read.pdb("1E4Y")  # kinase with drug
+```
+
+```{r}
+s1.chainA <- trim.pdb(s1, chain="A", elety="CA")
+s2.chainA <- trim.pdb(s2, chain="A", elety="CA")
+s3.chainA <- trim.pdb(s3, chain="A", elety="CA")
+```
+
+```{r}
+s1.b <- s1.chainA$atom$b
+s2.b <- s2.chainA$atom$b
+s3.b <- s3.chainA$atom$b
+```
+
+```{r}
+plotb3(s1.b, sse=s1.chainA, typ="l", ylab="Bfactor")
+plotb3(s2.b, sse=s2.chainA, typ="l", ylab="Bfactor")
+plotb3(s3.b, sse=s3.chainA, typ="l", ylab="Bfactor")
+```
+# A PDB file can be input in this function. This function first reads a PDB file and assigns it to a variable. Then, the PDB file is made into a smaller PDB object using `trim.pdb()` and assigned to a variable. Finally, the PDB file and and previous variable that was assigned the smaller PDB object is input in `plotb3()` to create a plot. To use the function, you must write `make.a.b3.plot()` and input the variable containing the desired PDB file and add a `.b` at the end. 
+# The output of the function is a line plot that contains secondary structure on the borders (top and bottom horizontal lines) of the graph.
+
+```{r}
+make.a.b3.plot <- function(pdb, sse, typ, ylab) {
+  s1 <- read.pdb("4AKE")
+  s2 <- read.pdb("1AKE")
+  s3 <- read.pdb("1E4Y")
+  pdb.chainA <- trim.pdb(s1, chain="A", elety="CA")
+  plotb3(pdb, sse=pdb.chainA, typ="l", ylab="Bfactor")
+}
+make.a.b3.plot(s1.b)
+make.a.b3.plot(s2.b)
+make.a.b3.plot(s3.b)
+```
+
+
+
+
+
+
+
+
