@@ -129,7 +129,7 @@ head(x)
 
 > Q2. Which approach to solving the ‘row-names problem’ mentioned above do you prefer and why? Is one approach more robust than another under certain circumstances?
 
-I prefer the second approach because as you run the code block x <- x[, -1] over and over again, the next column on the right will become the first column and the left-most column will be removed. Once you run the code block enough times, you'll receive an error message because ... Yes, the second approach is more robust because it resets the first column to be the rows and once it does that, running the code block multiple times won't change that. 
+I prefer the second approach because as you run the code block x <- x[, -1] over and over again, the next column on the right will become the first column and the left-most column will be removed. Once you run the code block enough times, you'll receive an error message. Yes, the second approach is more robust because it resets the first column to be the rows and once it does that, running the code block multiple times won't change that and you won't eventually receive an error message, unlike the first approach. 
 
 Now we have the data looking good, we want to explore it. We will use some conventional plots (barplots and pair plots).
 ```{r}
