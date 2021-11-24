@@ -2,22 +2,38 @@
 title: "Class11"
 author: "Leyna Nguyen (PID:A15422197)"
 date: "11/2/2021"
-output: html_document
+output: pdf_document
 ---
 > Q1: What percentage of structures in the PDB are solved by X-Ray and Electron Microscopy.
 
-
+87.55% (160736/183584) of the structures are solved by X-ray and 4.92% (9027/183584) of the structures are solved by electron microscopy. 
 
 > Q2: What proportion of structures in the PDB are protein?
 
-
+87.36% (160385/183584) of the structures are protein.
 
 > Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB?
 
+There are 4411 HIV-1 protease structures.
 
+> Q4: Water molecules normally have 3 atoms. Why do we see just one atom per water molecule in this structure?
 
+Because the hydrogen atom and oxygen atoms that form a water molecule are so small, we only see the structure of a water molecule as 1 atom. 
 
+> Q5: There is a conserved water molecule in the binding site. Can you identify this water molecule? What residue number does this water molecule have (see note below)?
 
+This water molecule has residue number 308.
+
+```{r}
+library(bio3d)
+pdb <- read.pdb("1hsg.pdb")
+pdb
+```
+
+```{r}
+attributes(pdb)
+head(pdb$atom)
+```
 
 
 
