@@ -1,3 +1,3 @@
 # BIMM143
 
-Bioinformatics class at UCSD
+Bioinformatics Class at UCSD
