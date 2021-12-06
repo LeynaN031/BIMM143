@@ -14,6 +14,4 @@ This is a showcase of my work in this class!
 - Class 15: [Transcriptomics and the Analysis of RNA-Seq Data](https://github.com/LeynaN031/BIMM143/blob/main/Class15/Class15.Rmd)
 - Class 16: [RNA-Seq Analysis Mini-Project](https://github.com/LeynaN031/BIMM143/blob/main/Class16/Class16.Rmd)
 - Class 17: [Vaccination Rate Mini Project](https://github.com/LeynaN031/BIMM143/blob/main/Class17/Class17.Rmd)
-- Introduction to R 
-- Data Visualization with ggplot2 [source](https://github.com/LeynaN031/BIMM143/blob/main/Class05/Class5.R)
-- 
+
